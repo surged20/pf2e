@@ -21,7 +21,7 @@ import {
     TreasurePF2e,
     WeaponPF2e,
 } from "@item";
-import { CharacterPF2e, NPCPF2e, FamiliarPF2e, HazardPF2e, LootPF2e, VehiclePF2e } from "@actor";
+import { CharacterPF2e, NPCPF2e, FamiliarPF2e, HazardPF2e, LootPF2e, SiegeWeaponPF2e, VehiclePF2e } from "@actor";
 import { ConditionSlug } from "@item/condition/data";
 import { WEAPON_PROPERTY_RUNES } from "@item/physical/runes";
 import { PreciousMaterialGrade } from "@item/physical/types";
@@ -54,6 +54,7 @@ import {
     otherConsumableTags,
     otherWeaponTags,
     preciousMaterials,
+    siegeWeaponTraits,
     spellOtherTraits,
     spellTraits,
     vehicleTraits,
@@ -66,6 +67,7 @@ import { DeityDomain } from "@item/deity/types";
 import { sluggify } from "@util";
 import { Alignment } from "@actor/creature/types";
 import { WeaponReloadTime } from "@item/weapon/types";
+import { SiegeWeaponPropulsionMethod } from "@actor/siege-weapon/types";
 
 export type StatusEffectIconTheme = "default" | "blackWhite";
 
@@ -75,6 +77,7 @@ const actorTypes: Record<ActorType, string> = {
     hazard: "ACTOR.TypeHazard",
     loot: "ACTOR.TypeLoot",
     npc: "ACTOR.TypeNpc",
+    siegeWeapon: "ACTOR.TypeSiegeweapon",
     vehicle: "ACTOR.TypeVehicle",
 };
 
@@ -770,6 +773,11 @@ const weaponReload: Record<WeaponReloadTime, string> = {
     10: "PF2E.Item.Weapon.ReloadOneMinute",
 };
 
+const siegeWeaponPropulsionMethods: Record<SiegeWeaponPropulsionMethod, string> = {
+    none: "PF2E.siegeWeapon.PropulsionMethodNone",
+    pp: "PF2E.siegeWeapon.PropulsionMethodPushedOrPulled",
+};
+
 export const PF2ECONFIG = {
     chatDamageButtonShieldToggle: false,
 
@@ -1114,6 +1122,8 @@ export const PF2ECONFIG = {
     weaponTraits,
     otherWeaponTags,
 
+    siegeWeaponPropulsionMethods,
+
     armorTraits,
     otherArmorTags,
 
@@ -1129,6 +1139,7 @@ export const PF2ECONFIG = {
     monsterTraits: creatureTraits,
     npcAttackTraits,
     hazardTraits,
+    siegeWeaponTraits,
     vehicleTraits,
 
     traitsDescriptions,
@@ -1965,6 +1976,7 @@ export const PF2ECONFIG = {
             hazard: HazardPF2e,
             loot: LootPF2e,
             familiar: FamiliarPF2e,
+            siegeWeapon: SiegeWeaponPF2e,
             vehicle: VehiclePF2e,
         },
     },

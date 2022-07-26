@@ -112,6 +112,16 @@ export function registerTemplates(): void {
         "systems/pf2e/templates/actors/loot/inventory.html",
         "systems/pf2e/templates/actors/loot/sidebar.html",
 
+        // Siege weapon partials
+        "systems/pf2e/templates/actors/siege-weapon/siege-weapon-sheet.html",
+        "systems/pf2e/templates/actors/siege-weapon/siege-weapon-header.html",
+        "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-health.html",
+        "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-armorclass.html",
+        "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-saves.html",
+        "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-resistances.html",
+        "systems/pf2e/templates/actors/siege-weapon/tabs/siege-weapon-details.html",
+        "systems/pf2e/templates/actors/siege-weapon/tabs/siege-weapon-description.html",
+
         // Vehicle partials
         "systems/pf2e/templates/actors/vehicle/vehicle-sheet.html",
         "systems/pf2e/templates/actors/vehicle/vehicle-header.html",

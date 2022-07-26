@@ -295,8 +295,8 @@ class TokenDocumentPF2e<TActor extends ActorPF2e = ActorPF2e> extends TokenDocum
             huge: 3,
             grg: Math.max(token.width, 4),
         }[actor.size];
-        if (actor.isOfType("vehicle")) {
-            // Vehicles can have unequal dimensions
+        if (actor.isOfType("siegeWeapon") || actor.isOfType("vehicle")) {
+            // Siege Weapons and Vehicles can have unequal dimensions
             const { width, height } = actor.getTokenDimensions();
             token.width = width;
             token.height = height;

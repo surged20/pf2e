@@ -67,6 +67,7 @@ const SELECTABLE_TAG_FIELDS = [
     "resistanceTypes",
     "saves",
     "senses",
+    "siegeWeaponTraits",
     "skillList",
     "skills",
     "speedTypes",

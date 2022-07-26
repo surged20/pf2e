@@ -1,0 +1,22 @@
+<form class="{{cssClass}} crb-style" autocomplete="off" spellcheck="off">
+    <aside>
+        <div class="sidebar" data-group="dashboard" data-tab="sidebar">
+            {{> "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-health.html"}}
+            {{> "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-armorclass.html"}}
+            {{> "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-saves.html"}}
+            {{> "systems/pf2e/templates/actors/siege-weapon/sidebar/siege-weapon-resistances.html"}}
+        </div>
+    </aside>
+    {{> "systems/pf2e/templates/actors/siege-weapon/siege-weapon-header.html"}}
+    <nav class="sheet-navigation" data-group="primary">
+        <span class="navigation-title">{{localize "PF2E.TabDetailsLabel"}}</span>
+        <a class="item" data-tab="details" title="{{localize "PF2E.TabDetailsLabel"}}"><i class="fas fa-dharmachakra"></i></a>
+        <a class="item" data-tab="description" title="{{localize "PF2E.TabDescriptionLabel"}}"><i class="fas fa-book-reader"></i></a>
+    </nav>
+    <section class="sheet-body">
+        <section class="sheet-content">
+            {{> "systems/pf2e/templates/actors/siege-weapon/tabs/siege-weapon-details.html"}}
+            {{> "systems/pf2e/templates/actors/siege-weapon/tabs/siege-weapon-description.html"}}
+        </section>
+    </section>
+</form>
